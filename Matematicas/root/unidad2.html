@@ -1,0 +1,1338 @@
+<!doctype html>
+<html>
+
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+   
+    <!-- viewport -->
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+       
+    <!-- title -->
+    <title></title>        
+        
+    <!-- add css and js for flipbook -->
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play:400,700">
+    <script src="js/jquery.js"></script>
+    <script src="js/turn.js"></script>              
+	<script src="js/jquery.fullscreen.js"></script>
+    <script src="js/jquery.address-1.6.min.js"></script>
+	<script src="js/onload.js"></script>
+
+
+    <!-- style css  -->
+	<style>	
+	    html,body {
+          margin: 0;
+          padding: 0;
+		  overflow:auto !important;
+        }
+        
+.recu18{
+position:absolute;
+top:65%; /*en función de los tamaños de tus imágenes */
+left:70%; /*en función de los tamaños de tus imágenes */
+
+}
+        
+.mapa2{
+position:absolute;
+top:45%; /*en función de los tamaños de tus imágenes */
+left:67%; /*en función de los tamaños de tus imágenes */
+
+}
+.recu22{
+position:absolute;
+top:4%; /*en función de los tamaños de tus imágenes */
+left:-3%; /*en función de los tamaños de tus imágenes */
+
+}
+        .recu2{
+position:absolute;
+top:41%; /*en función de los tamaños de tus imágenes */
+left:65%; /*en función de los tamaños de tus imágenes */
+
+}
+
+body{
+   background-image: url(img/fondo1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;}
+   
+ #fb5 #fb5-footer .fb5-bcg-tools{background:url(img/bg_logo.png) no-repeat top -1px left #DD9532 !important}  
+ #fb5 .fb5-nav-arrow {
+    background: url(img/arrow-navpage1.png) repeat scroll 0 0 rgba(0, 0, 0, 0) ;
+}
+.color_cabeza{background:#DD9532}
+   
+	</style>
+      
+	</head>
+ 
+<body>
+    <!--<img src="root/img/fondo1.jpg"  alt="snow" name="bg" width="10" height="10" id="bg" /> -->
+  <div align="left">
+      <script type="text/javascript" language="javascript" src="scripts/modal-window.min.js"></script>
+</div>
+    <link rel="stylesheet" type="text/css" href="css/shadowbox.css">
+<script type="text/javascript" src="js/shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init();
+</script>
+	<script type="text/javascript">
+//<![CDATA[
+// Definir lista de extensiones y el tipo de fichero de audio asociado. Puedes añadir más
+var html5_audiotypes={ 
+"mp3": "audio/mpeg",
+"mp4": "audio/mp4",
+"ogg": "audio/ogg",
+"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+var html5audio=document.createElement('audio')
+if (html5audio.canPlayType){ //Comprobar soporte para audio HTML5
+for (var i=0; i<arguments.length; i++){
+var sourceel=document.createElement('source')
+sourceel.setAttribute('src', arguments[i])
+if (arguments[i].match(/.(w+)$/i))
+sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+html5audio.appendChild(sourceel)
+}
+html5audio.load()
+html5audio.playclip=function(){
+html5audio.pause()
+html5audio.currentTime=0
+html5audio.play()
+}
+return html5audio
+}
+else{
+return {playclip:function(){throw new Error('Su navegador no soporta audio HTML5')}}
+}
+}
+
+//Inicializar sonidos
+var hover1 = createsoundbite('SIGNOS.wav');
+var hover2 = createsoundbite('CAP1.mp3');
+var hover5 = createsoundbite('CAP5.mp3');
+
+</script>
+
+ <!-- Evento acercar el mause al boton gota-->
+	<script type="text/javascript">
+    function show(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function hide(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    
+
+  </script>  
+  
+		
+	 <!-- Fin-->
+<!-- BEGIN FLIPBOOK STRUCTURE -->  
+<div id="fb5-ajax">	         
+         
+      <!-- BEGIN HTML BOOK -->      
+      <div data-current="book5" class="fb5" id="fb5">      
+            
+            <!-- PRELOADER -->
+            <div class="fb5-preloader">
+            <div id="wBall_1" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            <div id="wBall_2" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            <div id="wBall_3" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            <div id="wBall_4" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            <div id="wBall_5" class="wBall">
+            <div class="wInnerBall">
+            </div>
+            </div>
+            </div>      
+      
+            <!-- BACK BUTTON -->
+          <!--  <a href="#" id="fb5-button-back">BACK</a>
+                  
+            <!-- BACKGROUND FOR BOOK -->  
+            <div class="fb5-bcg-book"></div>                      
+          
+            <!-- BEGIN CONTAINER BOOK -->
+            <div id="fb5-container-book">
+     
+                <!-- BEGIN deep linking -->  
+                <section id="fb5-deeplinking">
+                     <ul>
+                          <li data-address="tapaadelante" data-page="1"></li>
+                         
+                         
+						  <li data-address="10-11" data-page="2"></li>
+                          <li data-address="10-11" data-page="3"></li>
+						  
+						  <li data-address="12-13" data-page="4"></li>
+                          <li data-address="12-13" data-page="5"></li>
+						  
+                         <li data-address="14-15" data-page="6"></li>
+                          <li data-address="14-15" data-page="7"></li>
+                         
+                         <li data-address="16-17" data-page="8"></li>
+                          <li data-address="16-17" data-page="9"></li>
+                         
+                         <li data-address="18-19" data-page="10"></li>
+                          <li data-address="18-19" data-page="11"></li>
+						 
+                          <li data-address="20-21" data-page="12"></li>
+                          <li data-address="20-21" data-page="13"></li>
+                         
+                          <li data-address="22-23" data-page="14"></li>
+                          <li data-address="22-23" data-page="15"></li>
+                         
+                          <li data-address="24-25" data-page="16"></li>
+                          <li data-address="24-25" data-page="17"></li>
+
+                           <li data-address="26-27" data-page="18"></li>
+                          <li data-address="26-27" data-page="19"></li>
+
+                          <li data-address="28-29" data-page="20"></li>
+                          <li data-address="28-29" data-page="21"></li>
+
+                          <li data-address="30-31" data-page="22"></li>
+                          <li data-address="30-31" data-page="23"></li>
+
+                          <li data-address="32-33" data-page="24"></li>
+                          <li data-address="32-33" data-page="25"></li>
+
+                          <li data-address="34-35" data-page="26"></li>
+                          <li data-address="34-35" data-page="27"></li>
+
+                          <li data-address="36-37" data-page="28"></li>
+                          <li data-address="36-37" data-page="29"></li>
+                          
+                          <li data-address="38-39" data-page="30"></li>
+                          <li data-address="38-39" data-page="31"></li>
+ 
+                         
+                         <li data-address="tapaatras" data-page="32"></li>
+<!--                          <li data-address="32-33" data-page="33"></li>
+                         
+                         <li data-address="34-35" data-page="34"></li>
+                          <li data-address="34-35" data-page="35"></li>
+                         
+                         <li data-address="36-37" data-page="36"></li>
+                          <li data-address="36-37" data-page="37"></li>
+                         
+                         <li data-address="38-39" data-page="38"></li>
+                          <li data-address="38-39" data-page="39"></li>
+                         
+                          <li data-address="40-41" data-page="40"></li>
+						 <li data-address="40-41" data-page="41"></li>
+                         
+                          <li data-address="tapafin" data-age="42"></li>-->
+                     </ul>
+                 </section>
+                <!-- END deep linking -->  
+            
+                
+                <!-- BEGIN ABOUT -->
+                <section id="fb5-about">
+               
+                </section>
+                <!-- END ABOUT -->
+                
+                
+                <!-- BEGIN BOOK -->
+                <div id="fb5-book">
+                
+                          
+                <!-- BEGIN PAGE 1-->          
+                <div style="background-image:url(pages/moduloA/1.jpg)" class="">
+                       
+                     <!-- begin container page book --> 
+                    
+                                    <!-- description for page  --> 
+                                    <div class="fb5-page-book">
+									 <div class="fb5-cont-page-book">
+                      
+                                       <div id="fb5-cover">
+                                          
+                                        	
+                                      </div>
+                                   </div> 
+                                   <!-- end description for page  -->           
+                                    
+                                  <!-- number page and title -->                
+                                  <div class="fb5-meta">
+                                        <span class="fb5-description"></span>
+                                        <span class="fb5-num"></span>
+                                  </div>
+                                  <!-- end number page and title  -->  
+                      </div> 
+                      <!-- end container page book --> 
+                        
+                </div>
+          
+				<!-- BEGIN PAGE 16-->          
+                <div style="background-image:url(pages/moduloA/2.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+                                                                                							                             
+ <!-- <div style="position: absolute;left:34%;top:57%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/animaciones/pag2/pag2.html" rel="shadowbox; width=1160; height=786"> <img   src="gotita/animacion.png" width="186" height="35"/> </a>
+</div>  -->
+
+<div style="position: absolute;left: 34%;top:57%;width: 193px;height: 31px;z-index: 2;" >
+ <a href="todo/videos/videopag2.html" rel="shadowbox; width=1160; height=770" > <img   src="gotita/video.png" width="186" height="35"/> </a>
+</div> 
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 16-->
+				<!-- BEGIN PAGE 17-->          
+                 <div style="background-image:url(pages/moduloA/3.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+                              
+                                        
+                                        
+                                     </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 17-->
+				
+				<!-- BEGIN PAGE 18-->          
+                <div style="background-image:url(pages/moduloA/4.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+                                                                                                                    							                             
+<!--<div style="position: absolute;left:79%;top:36%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/animaciones/pag4/pag4.html" rel="shadowbox; width=1160; height=786"> <img   src="gotita/animacion.png" width="186" height="35"/> </a>
+</div> -->
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 18-->
+                  
+				  <!-- BEGIN PAGE 19-->          
+                <div style="background-image:url(pages/moduloA/5.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+                                        
+ <div style="position: absolute;left: 6%;top:44%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag5/pag5.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>  
+
+<div style="position: absolute;left:69%;top:53%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/sabias/pag5.jpg" rel="shadowbox; width=1160; height=786"> <img   src="gotita/sabias.png" width="186" height="35"/> </a>
+</div> 
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 19-->
+                    
+                        <div style="background-image:url(pages/moduloA/6.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+        
+
+<div style="position: absolute;left:1%;top:41%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/sabias/pag6.jpg" rel="shadowbox; width=1160; height=786"> <img   src="gotita/sabias.png" width="186" height="35"/> </a>
+</div> 
+
+<div style="position: absolute;left: 64%;top:62%;width: 193px;height: 31px;z-index: 2;" >
+ <a href="todo/videos/videopag6.html" rel="shadowbox; width=1160; height=770" > <img   src="gotita/video.png" width="186" height="35"/> </a>
+</div>  
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 19-->
+                    
+                        <div style="background-image:url(pages/moduloA/7.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+                                        
+                    <div style="position: absolute;left: 65%;top:37%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag7/pag7.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>             
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 19-->
+                    
+                        <div style="background-image:url(pages/moduloA/8.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+   <div style="position: absolute;left:65%;top:38%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/animaciones/pag8/pag8.html" rel="shadowbox; width=1160; height=786"> <img   src="gotita/animacion.png" width="186" height="35"/> </a>
+</div>    
+
+<div style="position: absolute;left: 50%;top:29.5%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag8/pag8.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>    
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 19-->
+                    
+                        <div style="background-image:url(pages/moduloA/9.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+   
+<div style="position: absolute;left: 48%;top:66.5%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag9/pag9.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div> 
+   
+   <div style="position: absolute;    left: 29%;    top: 37.4%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/descargar/pag9.pdf" rel="shadowbox; width=1160; height=786" > <img   src="gotita/descargar.png" width="186" height="35"/> </a>
+   </div> 
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 19-->
+				
+                        <div style="background-image:url(pages/moduloA/10.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+                                        
+
+ <div style="position: absolute;left: 64%;top:36%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag10/pag10.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>   
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 19-->
+                    
+                        <div style="background-image:url(pages/moduloA/11.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+                                        
+
+ <div style="position: absolute;left:27%;top:33%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag11/pag11.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>    
+
+ 
+ 
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 19-->
+                    
+                        <div style="background-image:url(pages/moduloA/12.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+ <div style="position: absolute;left:64%;top:44.5%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag12/pag12.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>                              
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+     
+                    
+              <div style="background-image:url(pages/moduloA/13.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+ 
+ 
+                                        
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/14.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+                                 
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+        
+            <div style="background-image:url(pages/moduloA/15.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+  <div style="position: absolute;left: 63%;top:47%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag9/pag9.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>     
+   
+ 
+   
+                
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/16.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+  
+
+  <div style="position: absolute;left:80.5%;top:14%;width: 193px;height: 31px;z-index: 2;" >
+<a href="https://www.youtube.com/watch?v=1C-O2DXdoTw"  target="_blank" >  <img   src="gotita/enlace2.png" width="186" height="35"/> </a>
+   </div>  
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/17.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+ <div style="position: absolute;left: 29%;top:40%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag17/pag17.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>   
+                                      
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/18.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+
+
+
+<div style="position: absolute;left:58%;top:50%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/sabias/pag18.jpg" rel="shadowbox; width=1160; height=786"> <img   src="gotita/sabias.png" width="186" height="35"/> </a>
+</div> 
+
+
+                                        
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/19.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+  
+
+
+ <!--<div style="position: absolute;left: 33%;top:20%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/actividades/pag19/pag19.html" rel="shadowbox; width=1160; height=786" > <img   src="gotita/actividad.png" width="186" height="35"/> </a>
+   </div>  -->
+
+
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/20.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+
+                      <!--   <div style="position: absolute;left:4%;top:40%;width: 193px;height: 31px;z-index: 2;" >
+<a href="todo/animaciones/pag20/pag20.html" rel="shadowbox; width=1160; height=786"> <img   src="gotita/animacion.png" width="186" height="35"/> </a>
+</div>       -->
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/21.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+          
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/22.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+    
+
+                                        
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    <div style="background-image:url(pages/moduloA/23.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                
+                 <div style="background-image:url(pages/moduloA/24.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    
+                    
+                     <div style="background-image:url(pages/moduloA/25.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    
+                    
+                     <div style="background-image:url(pages/moduloA/26.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    
+                    
+                     <div style="background-image:url(pages/moduloA/27.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    
+                    
+                     <div style="background-image:url(pages/moduloA/28.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    
+                    
+                     <div style="background-image:url(pages/moduloA/29.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    
+                    
+                     <div style="background-image:url(pages/moduloA/30.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                
+                   <div style="background-image:url(pages/introduccion/blanco.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+
+                            
+
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                    
+                    
+                   
+                 
+              
+            
+         
+				<!-- BEGIN PAGE 20-->          
+                <div style="background-image:url(pages/moduloA/tapaatras.jpg)" class="">
+                       
+                         <!-- container page book --> 
+                         <div class="fb5-cont-page-book">
+                           
+                                    <!-- description for page from  --> 
+                                    <div class="fb5-page-book">
+                                        
+                                        
+                                        
+                                    </div> 
+                                              
+                                    <!-- number page and title for page -->                
+                                    <div class="fb5-meta">
+                                            <span class="fb5-num"></span>
+                                            <span class="fb5-description"></span>
+                                    </div>                 
+                            
+                          </div> 
+                        
+                </div>
+                <!-- END PAGE 20-->
+				
+			
+                     
+                    
+              </div>
+              <!-- END BOOK -->
+                           
+                
+              <!-- arrows -->
+              <a class="fb5-nav-arrow prev"></a>
+              <a class="fb5-nav-arrow next"></a>
+                
+                
+             </div>
+             <!-- END CONTAINER BOOK -->    
+    
+            <!-- BEGIN FOOTER -->
+            <div id="fb5-footer">
+        
+            <div class="fb5-bcg-tools"></div>
+             
+            
+            	<a id="fb5-logo" target="_blank" href="#" class="bg_logo">
+                	<img alt="" src="img/logo.png">
+            	</a>
+            
+            
+            <div class="fb5-menu" id="fb5-center">
+                <ul>
+                
+                   
+                                        
+                    
+                    <!-- icon_zoom_in -->                              
+                    <li>
+                        <a title="" class="fb5-zoom-in"></a>
+                    </li>                               
+                    
+                    <!-- icon_zoom_out -->
+                     
+                    <li>
+                        <a title="" class="fb5-zoom-out"></a>
+                    </li>                                
+                    
+                    <!-- icon_zoom_auto -->
+                    <li>
+                        <a title="" class="fb5-zoom-auto"></a>
+                    </li>                                
+                    
+                    <!-- icon_zoom_original -->
+                    <li>
+                        <a title="" class="fb5-zoom-original"></a>
+                    </li>
+                                     
+                    
+                    <!-- icon_allpages -->
+                    <li>
+                        <a title="" class="fb5-show-all"></a>
+                    </li>
+                                                    
+                    
+                    <!-- icon_home -->
+                    <li>
+                        <a title="" class="fb5-home"></a>
+                    </li>
+                                    
+                </ul>
+            </div>
+            
+
+            
+            
+        
+        </div>
+            <!-- END FOOTER -->    
+    
+
+            <!-- END CONTACT FORM -->    
+    
+            <!-- BEGIN ALL PAGES -->
+            <div id="fb5-all-pages" class="fb5-overlay">
+    
+          <section class="fb5-container-pages">
+    
+            <div id="fb5-menu-holder">
+    
+                <ul id="fb5-slider">
+                
+                         <li class="1">
+                           <img alt="" src="pages/moduloA/thumb/1.jpg">
+                         </li>
+                
+                        
+						          <li class="2">
+                           <img alt="" src="pages/moduloA/thumb/2.jpg">
+                         </li> 
+						
+                      
+                         <li class="3">
+                           <img alt="" src="pages/moduloA/thumb/3.jpg">
+                         </li>
+                         
+                         <li class="4">
+                           <img alt="" src="pages/moduloA/thumb/4.jpg">
+                         </li>
+                         
+                         <li class="5">
+                           <img alt="" src="pages/moduloA/thumb/5.jpg">
+                         </li>   
+						
+						<li class="6">
+                           <img alt="" src="pages/moduloA/thumb/6.jpg">
+                         </li> 
+						 
+                    <li class="7">
+                           <img alt="" src="pages/moduloA/thumb/7.jpg">
+                         </li> 
+						 
+						 <li class="8">
+                           <img alt="" src="pages/moduloA/thumb/8.jpg">
+                         </li> 
+						 
+						 <li class="9">
+                           <img alt="" src="pages/moduloA/thumb/9.jpg">
+                         </li> 
+						 
+						 <li class="10">
+                           <img alt="" src="pages/moduloA/thumb/10.jpg">
+                         </li> 
+						 
+						 <li class="11">
+                           <img alt="" src="pages/moduloA/thumb/11.jpg">
+                         </li> 
+						 
+						 <li class="12">
+                           <img alt="" src="pages/moduloA/thumb/12.jpg">
+                         </li> 
+						 
+					    <li class="13">
+                             <img alt="" src="pages/moduloA/thumb/13.jpg">
+               </li> 
+             
+
+             <li class="14">
+                             <img alt="" src="pages/moduloA/thumb/14.jpg">
+               </li> 
+
+                 <li class="15">
+                             <img alt="" src="pages/moduloA/thumb/15.jpg">
+               </li> 
+
+                 <li class="16">
+                             <img alt="" src="pages/moduloA/thumb/16.jpg">
+
+               </li> 
+
+                 <li class="17">
+                             <img alt="" src="pages/moduloA/thumb/17.jpg">
+               </li> 
+						 
+               <li class="18">
+                             <img alt="" src="pages/moduloA/thumb/18.jpg">
+               </li> 
+
+
+                 <li class="19">
+                             <img alt="" src="pages/moduloA/thumb/19.jpg">
+                 </li> 
+
+
+                   <li class="20">
+                             <img alt="" src="pages/moduloA/thumb/20.jpg">
+               </li> 
+                 <li class="21">
+                             <img alt="" src="pages/moduloA/thumb/21.jpg">
+               </li> 
+
+
+          <li class="22">
+                             <img alt="" src="pages/moduloA/thumb/22.jpg">
+               </li> 
+
+                 <li class="23">
+                             <img alt="" src="pages/moduloA/thumb/23.jpg">
+               </li> 
+               
+                <li class="24">
+                             <img alt="" src="pages/moduloA/thumb/24.jpg">
+               </li> 
+               
+                <li class="25">
+                             <img alt="" src="pages/moduloA/thumb/25.jpg">
+               </li> 
+               
+                <li class="26">
+                             <img alt="" src="pages/moduloA/thumb/26.jpg">
+               </li> 
+               
+                <li class="27">
+                             <img alt="" src="pages/moduloA/thumb/27.jpg">
+               </li> 
+               
+                <li class="28">
+                             <img alt="" src="pages/moduloA/thumb/28.jpg">
+               </li> 
+               
+                <li class="29">
+                             <img alt="" src="pages/moduloA/thumb/29.jpg">
+               </li> 
+               
+                <li class="30">
+                             <img alt="" src="pages/moduloA/thumb/30.jpg">
+               </li> 
+
+               
+
+						 <li class="32">
+                           <img alt="" src="pages/moduloA/unidad1/thumb/tapaatras.jpg">
+                         </li> 
+						 
+                     
+                  </ul>
+            
+              </div>
+    
+          </section>
+    
+         </div>
+            <!-- END ALL PAGES -->
+
+      </div>
+      <!-- END HTML BOOK -->     
+
+</div>
+<!-- END FLIPBOOK STRUCTURE -->    
+
+    <!-- CONFIGURATION FLIPBOOK -->    
+    <script>    
+    jQuery('#fb5').data('config',
+    {
+    "page_width":"550",
+    "page_height":"715",
+	"email_form":"office@somedomain.com",
+    "zoom_double_click":"1",
+    "zoom_step":"0.06",
+    "double_click_enabled":"true",
+    "tooltip_visible":"true",
+    "toolbar_visible":"true",
+    "gotopage_width":"30",
+    "deeplinking_enabled":"true",
+    "rtl":"false",
+    'full_area':'true'
+    })    
+    </script>
+
+       
+<style>
+
+</style>
+
+</body>
+
+</html>

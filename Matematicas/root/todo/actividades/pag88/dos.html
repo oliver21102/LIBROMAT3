@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/plantilla.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+
+</head>
+<body onload="inicio();" onresize="ajustar();" class="noseleccionable">
+
+ <img src="imagenes/fondo.png" id="fondo">
+ <div class="consigna">Arrastra los títulos del cuadro hacia el concepto correcto. </div>
+ <div class="panel"></div>
+ <div class="contenido">
+
+  <div class="palabras" id="a1" > <div class="contenidoPalabra">La metáfora  </div></div>
+  <div class="palabras" id="a2">  <div class="contenidoPalabra">La metonimia </div></div>  
+  <div class="palabras" id="a3"> <div class="contenidoPalabra">La sinécdoque  </div></div>
+
+  <div class="palabras" id="a4">  <div class="contenidoPalabra">La hipérbole </div></div>
+  <div class="palabras" id="a5"> <div class="contenidoPalabra">El hipérbaton </div></div>
+  <div class="palabras" id="a6"> <div class="contenidoPalabra">La aliteración </div></div>
+
+
+
+ 
+
+
+  <div class="espacio" id="n1"></div>
+  <div class="espacio" id="n2"></div>
+  <div class="espacio" id="n3"></div>
+  
+
+
+
+<div class="descripcion">Es la transferencia de un significado de un término a otro; es una especie de similitud en la cual no es expresado explícitamente ni el término de  comparación ni el objeto con el que se compara.</div>
+<div class="descripcion">Es la sustitución de una palabra por otra con la que está relacionada por contigüidad  comparten la misma referencia.</div>
+<div class="descripcion">Es la sustitución de un término con otro, que tiene relación con el primero, una relación de inclusión. Es una figura muy similar a la metonimia.</div>
+
+
+ </div>
+<a href="pag113.html" alt="2"><img src="imagenes/flechaAtras.png" id="flechaAtras"></a>
+ 
+<script type="text/javascript" src="js/ArrastrarSoltar.js"></script>
+ <script type="text/javascript">
+  function inicio(){
+  	iniciandoEventos();
+ajustar();
+var vpalabras=document.getElementsByClassName("palabras");
+desordenar(vpalabras);
+sonidoFondo();
+ 
+  }
+
+  function ajustar(){
+   var alto=$(window).height();
+   var ancho=$(window).width();
+   ancho=(ancho+alto)/2; 
+   var tamanio= ancho/45;  
+
+   $(".consigna").css("fontSize",""+(tamanio*1.2)+"px");
+   $(".contenidoPalabra").css("fontSize",""+(tamanio*1.2)+"px");
+   $(".descripcion").css("fontSize",""+(tamanio*1.2)+"px");      
+ alinear();
+  }
+
+  function alinear(){
+   var vpalabras=document.getElementsByClassName("palabras");
+   var vespacio=document.getElementsByClassName("espacio");
+   var vdescripcion=document.getElementsByClassName("descripcion");
+
+var altura=0; var ancho=-7;
+    for(var i=0; i<vpalabras.length; i++){
+    	vpalabras[i].style.left=""+ancho+"%";
+    	vpalabras[i].style.top=""+altura+"%";
+
+            altura+=15;
+           
+    } 
+
+var alt2=5;
+for(var x=0; x<vdescripcion.length-1; x++){
+  vdescripcion[x].style.left="30%";
+   vdescripcion[x].style.top=""+alt2+"%";
+ alt2+=38 ;
+
+}
+
+vdescripcion[vdescripcion.length-1].style.left="30%";
+   vdescripcion[vdescripcion.length-1].style.top="70%";
+
+ alt2=10;
+   for(var t=0; t<vespacio.length; t++){
+     vespacio[t].style.left="80%";
+     vespacio[t].style.top=""+alt2+"%";
+     alt2+=32;
+   }
+  }
+
+ function sonidoFondo(){
+    audio=document.createElement("audio");
+  //audio.src="sonidos/sonidoF.mp3";
+    audio.play();
+}
+
+ </script>
+
+</body>
+</html>

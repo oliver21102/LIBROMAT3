@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/plantilla.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+
+</head>
+<body onload="inicio();" onresize="ajustar();" class="noseleccionable">
+
+    <style>
+        #flecha{
+        position: absolute;
+        left: 91%;
+        top: 87%;
+        width: 6%;
+        height: 9%;
+        z-index: 7;
+        visibility: hidden;
+        }
+    
+    </style>
+        
+
+ <img src="imagenes/fondo.png" id="fondo">
+ <img src="imagenes/fondoFig.png" id="fondo" >
+ <div class="consigna"> </div>
+ <div class="panel"></div>
+ <div class="contenido">
+
+  <div class="palabras" id="a1">  <div class="contenidoPalabra">4 cm </div></div>
+  <div class="palabras" id="a2">  <div class="contenidoPalabra">8 cm  </div></div>
+  <div class="palabras" id="a3">  <div class="contenidoPalabra">15 cm </div></div>
+  <div class="palabras" id="a4" > <div class="contenidoPalabra">42 cm  </div></div>
+  <div class="palabras" id="a5"> <div class="contenidoPalabra">32 cm  </div></div>
+
+ 
+
+
+  <div class="espacio" id="n1"></div>
+  <div class="espacio" id="n2"></div>
+  <div class="espacio" id="n3"></div>
+  <div class="espacio" id="n4"></div>
+  <div class="espacio" id="n5"></div>
+
+     
+
+ </div>
+<a href="pag88dos.html" alt="1"><img src="imagenes/flecha.png" id="flecha"></a>
+
+<script type="text/javascript" src="js/ArrastrarSoltar.js"></script>
+ <script type="text/javascript">
+  function inicio(){
+  	iniciandoEventos();
+ajustar();
+sonidoFondo();
+var vpalabras=document.getElementsByClassName("palabras");
+desordenar(vpalabras);
+ 
+  }
+
+  function ajustar(){
+   var alto=$(window).height();
+   var ancho=$(window).width();
+   ancho=(ancho+alto)/2; 
+   var tamanio= ancho/45;  
+
+   $(".consigna").css("fontSize",""+(tamanio*1.2)+"px");
+   $(".contenidoPalabra").css("fontSize",""+(tamanio*1.1)+"px");
+   $(".descripcion").css("fontSize",""+(tamanio*0.9)+"px");      
+ alinear();
+  }
+
+  function alinear(){
+   var vpalabras=document.getElementsByClassName("palabras");
+   var vespacio=document.getElementsByClassName("espacio");
+   var vdescripcion=document.getElementsByClassName("descripcion");
+
+var altura=78; var ancho=3;
+    for(var i=0; i<vpalabras.length; i++){
+    	vpalabras[i].style.left=""+ancho+"%";
+    	vpalabras[i].style.top=""+altura+"%";
+
+            ancho+=22;
+           
+    } 
+
+var an=3;
+
+   for(var t=0; t<vespacio.length; t++){
+     vespacio[t].style.top="59%";
+     vespacio[t].style.left=""+an+"%";
+     an+=22;
+   }
+  }
+
+
+ function sonidoFondo(){
+    audio=document.createElement("audio");
+  //audio.src="sonidos/sonidoF.mp3";
+    audio.play();
+}
+
+ </script>
+
+</body>
+</html>
